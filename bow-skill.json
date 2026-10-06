@@ -1,0 +1,21 @@
+{
+  "id": "mysql",
+  "label": "MySQL",
+  "version": "1.0.0",
+  "description": "Bộ skill cho cơ sở dữ liệu MySQL / InnoDB (thiết kế schema, index, tối ưu truy vấn, transaction và khoá, đổi schema không khoá bảng) — không gắn với framework nào, ghép được với Laravel / Node / bất kỳ backend nào dùng MySQL. Một skill lấy từ planetscale/database-skills, đã gỡ phần quảng cáo hosting (xem THIRD_PARTY.md).",
+  "maintainer": "bow-gid",
+  "skillsDir": "skills",
+  "targets": {
+    "detect": [
+      { "file": ".env.example", "contains": "DB_CONNECTION=mysql" },
+      { "file": "docker-compose.yml", "contains": "image: mysql" },
+      { "file": "docker-compose.yaml", "contains": "image: mysql" },
+      { "file": "compose.yaml", "contains": "image: mysql" },
+      { "file": "package.json", "contains": "\"mysql2\"" },
+      { "file": "schema.prisma", "contains": "provider = \"mysql\"" }
+    ]
+  },
+  "skills": [
+    "mysql"
+  ]
+}
